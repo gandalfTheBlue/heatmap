@@ -5,11 +5,8 @@ import { Button, Form, Input } from 'antd'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import * as appAction from 'src/actions/app'
-import { project } from 'src/config'
 import api from 'src/utils/api'
 import { local, TOKEN } from 'src/utils/storage'
-
-import logo from '../../images/logo.png'
 
 const Login = ({ history }) => {
   const dispatch = useDispatch()
