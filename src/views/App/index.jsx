@@ -26,12 +26,6 @@ const App = () => {
     }
   }, [dispatch, isLogin])
 
-  useEffect(() => {
-    if (user) {
-      dispatch(appAction.getCategories())
-    }
-  }, [dispatch, user])
-
   return (
     <div
       className={classnames('app', {
