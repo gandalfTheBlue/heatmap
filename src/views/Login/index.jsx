@@ -1,12 +1,15 @@
-import React from 'react'
 import './index.less'
-import { Form, Input, Button } from 'antd'
+
+import { LockOutlined, UserOutlined } from '@ant-design/icons'
+import { Button, Form, Input } from 'antd'
+import React from 'react'
+import { useDispatch } from 'react-redux'
+import * as appAction from 'src/actions/app'
+import { project } from 'src/config'
 import api from 'src/utils/api'
 import { local, TOKEN } from 'src/utils/storage'
-import * as appAction from 'src/actions/app'
-import { useDispatch } from 'react-redux'
-import { UserOutlined, LockOutlined } from '@ant-design/icons'
-import { project } from 'src/config'
+
+import logo from '../../images/logo.png'
 
 const Login = ({ history }) => {
   const dispatch = useDispatch()
@@ -31,7 +34,7 @@ const Login = ({ history }) => {
         <Form layout="vertical" onFinish={onFinish}>
           <Form.Item
             className="login-container-title"
-            label={`${project}管理平台`}
+            label="疫情防控系统"
           ></Form.Item>
           <Form.Item
             rules={[{ required: true }]}

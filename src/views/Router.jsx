@@ -2,19 +2,22 @@ import { SettingFilled } from '@ant-design/icons'
 import React from 'react'
 import { Redirect, Switch } from 'react-router'
 import { Route } from 'react-router-dom'
+import Detail from './Detail'
 
-import Admin from './Admin'
+import HeatMap from './HeatMap'
 import Login from './Login'
 
 export const navs = [
   {
-    path: '/admin',
-    title: '平台管理员',
-    titleProp: 'username',
-    apiPath: '/user/platformAdmin',
-    isEnable: true,
-    isPassword: true,
-    comp: Admin,
+    path: '/heat-map',
+    title: '体温热点',
+    comp: HeatMap,
+    icon: <SettingFilled />,
+  },
+  {
+    path: '/detail',
+    title: '热点详情',
+    comp: Detail,
     icon: <SettingFilled />,
   },
 ]

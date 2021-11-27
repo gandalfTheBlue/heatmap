@@ -1,4 +1,4 @@
-export const project = '大幸'
+export const project = '中科微'
 
 export const domain = process.env.REACT_APP_DOMAIN
 

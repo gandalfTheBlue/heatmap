@@ -14,14 +14,14 @@ const EnvDomain = {
     user: 'ys',
     password: 'b%RU470!',
     short: 'test',
-    remoteRoot: '/dacin',
+    remoteRoot: '/heatmap',
   },
   production: {
     host: '47.94.7.204',
     user: 'yangshan',
     password: 'CbfaPhFjs4SPhW3N',
     short: 'prod',
-    remoteRoot: '/dacin',
+    remoteRoot: '/heatmap',
   },
 }
 

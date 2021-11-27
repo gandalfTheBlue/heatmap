@@ -21,11 +21,13 @@ const Header = ({ user }) => {
       <div className="header-logo">
         <Link to="/">
           <AppstoreOutlined />
-          <span>管理系统</span>
+          <span>疫情防控</span>
         </Link>
       </div>
       <div className="header-right">
-        <div className="header-right-welcome">{project}-管理平台欢迎您！</div>
+        <div className="header-right-welcome">
+          {project}-疫情防控系统欢迎您！
+        </div>
         <div className="header-right-user">
           <div className="header-right-user-signout">
             <Dropdown overlay={getLogoutDropdown(changePwd, signout)}>
@@ -49,7 +51,7 @@ export default Header
 const getLogoutDropdown = (changePwd, signout) => {
   return (
     <Menu>
-      <Menu.Item onClick={changePwd}>修改密码</Menu.Item>
+      {/* <Menu.Item onClick={changePwd}>修改密码</Menu.Item> */}
       <Menu.Item onClick={signout}>安全退出</Menu.Item>
     </Menu>
   )
