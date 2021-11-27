@@ -1,0 +1,66 @@
+.header {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: calc(var(--sidemenu-width) + 4px);
+    background: #002140;
+
+    a {
+      display: flex;
+      align-items: center;
+
+      .anticon-appstore {
+        color: #40c9c6;
+        margin-left: 18px;
+        font-size: 40px;
+      }
+
+      span {
+        font-size: 25px;
+        color: #fff;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &-right {
+    margin: 0 20px;
+    width: calc(100% - var(--sidemenu-width));
+    display: flex;
+    justify-content: space-between;
+
+    &-welcome {
+      font-size: 20px;
+    }
+
+    &-user {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .ant-divider {
+        top: unset;
+        height: 18px;
+        margin: 0 10px;
+      }
+
+      &-password,
+      &-signout {
+        & > span {
+          margin-right: 5px;
+        }
+
+        cursor: pointer;
+
+        .username {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
