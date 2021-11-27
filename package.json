@@ -1,8 +1,8 @@
 {
-  "name": "dacin",
+  "name": "heatmap",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/dacin",
+  "homepage": "/heatmap",
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
     "@ant-design/pro-table": "^2.55.0",
