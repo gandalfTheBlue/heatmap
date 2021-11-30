@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux'
 import * as appAction from 'src/actions/app'
 import api from 'src/utils/api'
 import { local, TOKEN } from 'src/utils/storage'
+import logo from 'src/images/logo.jpeg'
 
 const Login = ({ history }) => {
   const dispatch = useDispatch()
@@ -27,6 +28,9 @@ const Login = ({ history }) => {
 
   return (
     <div className="login">
+      <div className="login-logo">
+        <img src={logo} alt="logo" />
+      </div>
       <div className="login-container">
         <Form layout="vertical" onFinish={onFinish}>
           <Form.Item
@@ -48,9 +52,8 @@ const Login = ({ history }) => {
             />
           </Form.Item>
           <Form.Item>
-            <Button htmlType="submit" type="primary">
-              登录
-            </Button>
+            <Button htmlType="submit">登录</Button>
+            <Button style={{ marginLeft: 50 }}>忘记密码</Button>
           </Form.Item>
         </Form>
       </div>

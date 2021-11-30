@@ -1,6 +1,12 @@
 import './index.less'
+import head1 from 'src/images/head1.jpeg'
+import head2 from 'src/images/head2.jpeg'
+import head3 from 'src/images/head3.jpeg'
+import head4 from 'src/images/head4.jpeg'
+import head5 from 'src/images/head5.jpeg'
+import head6 from 'src/images/head6.jpeg'
 
-import { Table } from 'antd'
+import { Avatar, Table } from 'antd'
 import React from 'react'
 
 const Detail = () => {
@@ -35,71 +41,87 @@ const Detail = () => {
       dataIndex: 'id',
       key: 'id',
     },
+    {
+      title: '体温',
+      dataIndex: 'temperature',
+      key: 'temperature',
+    },
+    {
+      title: '头像',
+      dataIndex: 'head',
+      key: 'head',
+      render: (_, record) => (
+        <Avatar shape="square" size={40} src={record.head} />
+      ),
+    },
   ]
 
   const data = [
     {
       key: '1',
       device: 'SCDMA',
-      report: '2021/11/27 18:10:24',
+      report: '2021/11/30 18:10:24',
       IMEI: '990006202564906',
       IMSI: '460006598141406',
       phone: '13567890556',
-      id: '510182198907153345',
+      id: '510106196911308374',
+      temperature: '38.0',
+      head: head1,
     },
     {
       key: '2',
-      device: 'SCDMA',
-      report: '2021/11/27 18:10:24',
-      IMEI: '990006202564906',
+      device: 'GSM_02',
+      report: '2021/11/27 10:33:09',
+      IMEI: '985748608531888',
       IMSI: '460006598141406',
       phone: '13567890556',
       id: '510182198907153345',
+      temperature: '37.4',
+      head: head2,
     },
     {
       key: '3',
-      device: 'SCDMA',
-      report: '2021/11/27 18:10:24',
-      IMEI: '990006202564906',
-      IMSI: '460006598141406',
+      device: 'FDD',
+      report: '2021/11/27 12:54:45',
+      IMEI: '537710824851857',
+      IMSI: '089904310062647454',
       phone: '13567890556',
-      id: '510182198907153345',
+      id: '510106197106269979',
+      temperature: '37.5',
+      head: head3,
     },
     {
       key: '4',
-      device: 'SCDMA',
-      report: '2021/11/27 18:10:24',
-      IMEI: '990006202564906',
-      IMSI: '460006598141406',
+      device: 'TDD',
+      report: '2021/11/28 13:16:22',
+      IMEI: '987186195310226',
+      IMSI: '088904139151920268',
       phone: '13567890556',
-      id: '510182198907153345',
+      id: '510106197106266997',
+      temperature: '37.9',
+      head: head4,
     },
     {
       key: '5',
-      device: 'SCDMA',
-      report: '2021/11/27 18:10:24',
-      IMEI: '990006202564906',
-      IMSI: '460006598141406',
+      device: 'CDMA',
+      report: '2021/11/26 11:10:55',
+      IMEI: '355153362133223',
+      IMSI: '086922069344117037',
       phone: '13567890556',
-      id: '510182198907153345',
+      id: '510403197806267357',
+      temperature: '37.3',
+      head: head5,
     },
     {
       key: '6',
-      device: 'SCDMA',
-      report: '2021/11/27 18:10:24',
-      IMEI: '990006202564906',
+      device: 'WCDMA_01',
+      report: '2021/11/30 08:43:11',
+      IMEI: '867658718006759',
       IMSI: '460006598141406',
       phone: '13567890556',
-      id: '510182198907153345',
-    },
-    {
-      key: '7',
-      device: 'SCDMA',
-      report: '2021/11/27 18:10:24',
-      IMEI: '990006202564906',
-      IMSI: '460006598141406',
-      phone: '13567890556',
-      id: '510182198907153345',
+      id: '510403197806266936',
+      temperature: '37.6',
+      head: head6,
     },
   ]
 

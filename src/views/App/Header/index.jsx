@@ -1,7 +1,7 @@
 import './index.less'
 
-import { AppstoreOutlined, UserOutlined } from '@ant-design/icons'
-import { Dropdown, Menu } from 'antd'
+import { AppstoreOutlined, UserOutlined, BellOutlined } from '@ant-design/icons'
+import { Dropdown, Menu, Badge } from 'antd'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { project } from 'src/config'
@@ -29,6 +29,12 @@ const Header = ({ user }) => {
           {project}-疫情防控系统欢迎您！
         </div>
         <div className="header-right-user">
+          <div className="header-right-user-warning">
+            <span>体温告警: </span>
+            <Badge count={5} size="small">
+              <BellOutlined style={{ fontSize: 16 }} />
+            </Badge>
+          </div>
           <div className="header-right-user-signout">
             <Dropdown overlay={getLogoutDropdown(changePwd, signout)}>
               <span>

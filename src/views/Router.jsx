@@ -1,9 +1,9 @@
-import { SettingFilled } from '@ant-design/icons'
+import { SettingFilled, StarOutlined, TagOutlined } from '@ant-design/icons'
 import React from 'react'
 import { Redirect, Switch } from 'react-router'
 import { Route } from 'react-router-dom'
-import Detail from './Detail'
 
+import Detail from './Detail'
 import HeatMap from './HeatMap'
 import Login from './Login'
 
@@ -12,13 +12,17 @@ export const navs = [
     path: '/heat-map',
     title: '体温热点',
     comp: HeatMap,
-    icon: <SettingFilled />,
+    icon: <StarOutlined />,
   },
   {
     path: '/detail',
     title: '热点详情',
     comp: Detail,
     icon: <SettingFilled />,
+  },
+  {
+    title: '轨迹跟踪',
+    icon: <TagOutlined />,
   },
 ]
 
