@@ -21,8 +21,10 @@ export const navs = [
     icon: <SettingFilled />,
   },
   {
+    path: '/track',
     title: '轨迹跟踪',
     icon: <TagOutlined />,
+    navigate: false,
   },
 ]
 

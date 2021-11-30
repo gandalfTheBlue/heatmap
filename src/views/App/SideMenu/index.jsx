@@ -45,7 +45,11 @@ const SideMenu = ({ activeRoute }) => {
           <Menu.Item
             key={item.path}
             icon={item.icon}
-            onClick={() => history.push(item.path)}
+            onClick={() => {
+              if (item.navigate !== false) {
+                history.push(item.path)
+              }
+            }}
           >
             {item.title}
           </Menu.Item>
